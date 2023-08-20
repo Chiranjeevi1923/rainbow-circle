@@ -1,0 +1,27 @@
+{
+  "name": "rainbow-circle",
+  "version": "1.0.0",
+  "description": "Simple rainbow circle animation",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chiranjeevi1923/rainbow-circle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chiranjeevi1923/rainbow-circle/issues"
+  },
+  "homepage": "https://github.com/Chiranjeevi1923/rainbow-circle#readme",
+  "dependencies": {
+    "lil-gui": "^0.18.2",
+    "three": "^0.155.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9"
+  }
+}
