@@ -1,6 +1,6 @@
 export class Circle {
     // rainbowRadius = 1
-    constructor(ctx, mouse, x, y, radius, color, branchAngle, rainbowRadius, velocity) {
+    constructor(ctx, mouse, x, y, radius, color, branchAngle, rainbowRadius, velocity, distanceVelocity) {
         this.ctx = ctx
         this.x = x
         this.y = y
@@ -8,8 +8,9 @@ export class Circle {
         this.color = color
         this.mouse = mouse
         this.branchAngle = branchAngle
-        this.rainbowRadius = rainbowRadius
         this.velocity = velocity
+        this.rainbowRadius = rainbowRadius
+        this.distanceVelocity = distanceVelocity
     }
 
     draw = () => {
@@ -21,11 +22,11 @@ export class Circle {
         this.ctx.stroke();
     }
 
-    update = (time) => {
+    update = () => {
 
         this.branchAngle += this.velocity;
-        this.x = this.mouse.x + Math.cos(this.branchAngle) * this.rainbowRadius
-        this.y = this.mouse.y + Math.sin(this.branchAngle) * this.rainbowRadius
+        this.x = this.mouse.x + Math.cos(this.branchAngle) * (this.rainbowRadius - this.distanceVelocity)
+        this.y = this.mouse.y + Math.sin(this.branchAngle) * (this.rainbowRadius - this.distanceVelocity)
 
 
         // Redraw  the circle
